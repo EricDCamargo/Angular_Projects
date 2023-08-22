@@ -1,0 +1,30 @@
+<div class="calculator">
+  <div class="buttons">
+    <div id="value">
+      <h3>{{ funcT }}</h3>
+      <h2>{{ calValue | number }}</h2>
+    </div>
+    <span id="clear" (click)="onClickValue('c', 'function')">Limpar</span>
+    <span (click)="onClickValue('/', 'function')">/</span>
+    <span (click)="onClickValue('*', 'function')">*</span>
+    <span (click)="onClickValue('7', 'number')">7</span>
+    <span (click)="onClickValue('8', 'number')">8</span>
+    <span (click)="onClickValue('9', 'number')">9</span>
+    <span (click)="onClickValue('-', 'function')">-</span>
+    <span (click)="onClickValue('4', 'number')">4</span>
+    <span (click)="onClickValue('5', 'number')">5</span>
+    <span (click)="onClickValue('6', 'number')">6</span>
+    <span id="plus" (click)="onClickValue('+', 'function')">+</span>
+    <span (click)="onClickValue('1', 'number')">1</span>
+    <span (click)="onClickValue('2', 'number')">2</span>
+    <span (click)="onClickValue('3', 'number')">3</span>
+    <span (click)="onClickValue('0', 'number')">0</span>
+    <span (click)="onClickValue('00', 'number')">00</span>
+    <span (click)="onClickValue('.', 'number')">.</span>
+    <span id="equal" (click)="onClickValue('=', 'function')">=</span>
+  </div>
+  <!-- <input type="number" [(ngModel)]="num1" name="num1" />
+  <input type="number" [(ngModel)]="num2" name="num2" />
+  <button (click)="somar()">Somar</button>
+  -->
+</div>
