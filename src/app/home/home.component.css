@@ -2,28 +2,32 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 320px;
-  width: 500px;
-  align-items: start;
   justify-content: center;
-  row-gap: 40px;
-
+  height: 100vh;
 }
 
-.menu .anchor-link .anchor-text {
-  outline: none;
-  border: 0px
-}
-
-.menu .anchor-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 60px;
-  width: 200px;
-  background-image: linear-gradient(to bottom, black, red);
-
-  border-radius: 70px;
+.menu-link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  background: linear-gradient(to bottom, #ff5757, #ff1d1d);
   color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  cursor: pointer;
   outline: none;
+  border: none;
+}
+
+.menu-link:hover {
+  background: linear-gradient(to bottom, #ff1d1d, #ff5757);
+  transform: scale(1.05);
+}
+
+.menu-text {
+  margin: 0;
+  text-align: center;
 }
