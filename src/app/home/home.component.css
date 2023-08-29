@@ -11,10 +11,9 @@
   display: inline-block;
   padding: 10px 20px;
   margin: 10px;
-  border-radius: 30px;
-  background: linear-gradient(to bottom, #ff5757, #ff1d1d);
+  font-size: small;
+  background: linear-gradient(45deg, red, blue);
   color: white;
-  font-size: 18px;
   font-weight: bold;
   transition: background 0.3s, transform 0.2s;
   cursor: pointer;
@@ -23,7 +22,6 @@
 }
 
 .menu-link:hover {
-  background: linear-gradient(to bottom, #ff1d1d, #ff5757);
   transform: scale(1.05);
 }
 
