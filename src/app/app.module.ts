@@ -10,12 +10,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { EditAddProductModalComponent } from './../app/components/edit-add-product-modal/edit-add-product-modal.component';
 import { ProductsComponent } from './../app/components/products/products.component';
+import { BooksComponent } from './components/books/books.component';
+import { EditAddBookModalComponent } from './components/edit-add-book-modal/edit-add-book-modal.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'imc', component: ImcComponent },
   { path: 'calc', component: CalcComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'books', component: BooksComponent },
 ];
 
 @NgModule({
@@ -26,6 +29,8 @@ const routes: Routes = [
     HomeComponent,
     ProductsComponent,
     EditAddProductModalComponent,
+    BooksComponent,
+    EditAddBookModalComponent,
   ],
   imports: [
     NgbModule,

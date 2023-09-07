@@ -1,0 +1,40 @@
+<div class="jumbotron text-center bg-secondary text-light">
+  <h1 class="display-4">Cadastro de Livros</h1>
+</div>
+<app-edit-add-book-modal
+  *ngIf="isBookModalOpen"
+  (closed)="closeBookModal()"
+  [selectedBook]="selectedBook"
+  (submitRequested)="addOrEditBook($event)"
+></app-edit-add-book-modal>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <th scope="row">{{ book.id }}</th>
+        <td>{{ book.name }}</td>
+        <td>R$ {{ book.price }}</td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="openBookModal(book)">
+            Editar
+          </button>
+          <button class="btn btn-danger btn-sm" (click)="deleteBook(book)">
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" (click)="openBookModal()">
+    Adicionar Produto
+  </button>
+</div>

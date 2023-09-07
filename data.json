@@ -9,6 +9,11 @@
       "id": 2,
       "name": "dasd",
       "price": 0.02
+    },
+    {
+      "id": 3,
+      "name": "Produtinho topp",
+      "price": 0.01
     }
   ],
   "books": [
@@ -16,6 +21,11 @@
       "id": 1,
       "name": "dasd",
       "price": 0.03
+    },
+    {
+      "id": 2,
+      "name": "Livro mais de mill",
+      "price": 1001
     }
   ]
 }
