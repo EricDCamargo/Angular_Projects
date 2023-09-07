@@ -1,0 +1,46 @@
+<div class="jumbotron text-center bg-secondary text-light">
+  <h1 class="display-4">Cadastro de Produtos</h1>
+</div>
+<app-edit-add-product-modal
+  *ngIf="isProductModalOpen"
+  (closed)="closeProductModal()"
+  [selectedProduct]="selectedProduct"
+  (submitRequested)="addOrEditProduct($event)"
+></app-edit-add-product-modal>
+
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{ product.id }}</th>
+        <td>{{ product.name }}</td>
+        <td>R$ {{ product.price }}</td>
+        <td>
+          <button
+            class="btn btn-primary btn-sm"
+            (click)="openProductModal(product)"
+          >
+            Editar
+          </button>
+          <button
+            class="btn btn-danger btn-sm"
+            (click)="deleteProduct(product)"
+          >
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success" (click)="openProductModal()">
+    Adicionar Produto
+  </button>
+</div>

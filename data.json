@@ -1,0 +1,21 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "dasd",
+      "price": 0.03
+    },
+    {
+      "id": 2,
+      "name": "dasd",
+      "price": 0.02
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "dasd",
+      "price": 0.03
+    }
+  ]
+}
